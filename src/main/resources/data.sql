@@ -5,3 +5,9 @@ insert ignore  into patient
     ("rafi","male","1999-08-16","rafi@gmail.som","B_P"),
     ("kajol","female","1999-06-3","kajol@gmail.som","AB_P"),
     ("sohel","male","1999-06-22","sohel@gmail.som","O_N");
+
+insert ignore into doctor
+    (name,spatialization,email)values
+    ("Dr.arif","cardiologist","arif123@gmail.com"),
+    ("Dr.Sohel","gastrologist","sohel123@gmail.com"),
+    ("Dr.turja","Mentology","trrja123@gmail.com");
