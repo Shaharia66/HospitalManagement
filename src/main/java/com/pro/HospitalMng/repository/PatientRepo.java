@@ -27,8 +27,11 @@ public interface PatientRepo extends JpaRepository<Patient,Long> {
 
     @Query("select p.bloodGroup ,Count(p) from Patient p where p.bloodGroup is not null group by p.bloodGroup")
     List<Object[]> countEachBloodGroup();
+
     @Query(value = "select * from patient",nativeQuery = true)
     List<Patient> findAllPat();
+
+
     @Transactional
     @Modifying
     @Query("update Patient p set p.name=:name where p.id=:id")

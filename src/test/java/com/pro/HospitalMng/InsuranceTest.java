@@ -24,5 +24,4 @@ public class InsuranceTest {
         Patient patient = insuranceService.assignInsurance(insurance,1L);
         System.out.println(patient);
     }
-
 }

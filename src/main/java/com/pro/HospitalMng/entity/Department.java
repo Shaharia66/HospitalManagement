@@ -18,7 +18,7 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true, nullable = false,length = 100)
+    @Column(unique = true, nullable = false,length = 80)
     private String name;
 
     @OneToOne
@@ -26,4 +26,5 @@ public class Department {
 
     @ManyToMany
     private List<Doctor> doctors;
+
 }
