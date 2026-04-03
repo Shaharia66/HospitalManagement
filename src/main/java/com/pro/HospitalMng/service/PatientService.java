@@ -6,6 +6,8 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class PatientService {
@@ -17,5 +19,10 @@ public class PatientService {
         p1.setName("Rahi");
 
         return p1;
+    }
+
+    public List<Patient> findAll(Long id) {
+       patientRepo.findById(id).orElseThrow(()->new IllegalArgumentException("not found") );
+       return patientRepo.findAll();
     }
 }

@@ -1,5 +1,6 @@
 package com.pro.HospitalMng.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pro.HospitalMng.entity.type.BloodGroupType;
 import jakarta.persistence.*;
 import lombok.*;
